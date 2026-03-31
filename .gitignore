@@ -1,0 +1,19 @@
+# Python files
+
+**pycache**/
+*.pyc
+
+# Virtual environment
+
+venv/
+env/
+
+# Jenkins
+
+workspace/
+*.log
+
+# OS files
+
+.DS_Store
+Thumbs.db
