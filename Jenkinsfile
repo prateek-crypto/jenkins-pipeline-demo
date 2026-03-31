@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo "Fetching code from GitHub..."
-                git 'https://github.com/YOUR-USERNAME/jenkins-pipeline-demo.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo "Running Python app..."
