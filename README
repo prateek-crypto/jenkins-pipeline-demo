@@ -1,0 +1,40 @@
+# Jenkins Pipeline Demo 🚀
+
+## 📌 Project Overview
+
+This project demonstrates a CI/CD pipeline using Jenkins integrated with GitHub.
+
+## ⚙️ Tools Used
+
+* Jenkins
+* GitHub
+* Python
+
+## 🔄 Pipeline Flow
+
+1. Code is pushed to GitHub
+2. Jenkins pulls the code
+3. Pipeline executes stages:
+
+   * Checkout
+   * Build
+   * Output
+
+## ▶️ How It Works
+
+* Jenkins reads the `Jenkinsfile`
+* Executes each stage automatically
+* Runs the Python script
+
+## 📂 Files in Project
+
+* `app.py` → simple Python script
+* `Jenkinsfile` → pipeline definition
+
+## ✅ Output
+
+Displays message from Python script via Jenkins pipeline
+
+## 👨‍💻 Author
+
+Prateek Mishra
