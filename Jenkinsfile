@@ -1,18 +1,30 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'USER_NAME', defaultValue: 'Prateek', description: 'Enter your name')
+        choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Select environment')
+    }
+
     stages {
 
         stage('Build') {
             steps {
-                echo "Running Python app..."
-                sh 'python3 app.py'
+                echo "Hello ${params.USER_NAME}"
+                sh 'echo Running application...'
             }
         }
 
-        stage('Done') {
+        stage('Long Running Task') {
             steps {
-                echo "Pipeline completed successfully"
+                echo "Simulating long task..."
+                sh 'sleep 30'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying to ${params.ENV}"
             }
         }
     }
